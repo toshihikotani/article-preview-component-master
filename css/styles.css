@@ -19,6 +19,8 @@ main {
   width: 330px;
   background-color: white;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   /* DRAWERS IMAGE */
 }
 main .drawers-image {
@@ -60,8 +62,10 @@ main article .avatar-section {
   background-color: white;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  display: none;
+  display: flex;
   flex-direction: row;
+  /* AVATAR IMAGE */
+  /* AVATAR DETAILS */
 }
 main article .avatar-section .circle-image {
   width: 40px;
@@ -94,7 +98,7 @@ main article .social-media-section {
   background-color: hsl(217deg, 19%, 35%);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  display: flex;
+  display: none;
   flex-direction: row;
 }
 main article .social-media-section h1 {
@@ -130,10 +134,139 @@ main article .share .share-button {
 main article .share .share-button svg {
   fill: hsl(214deg, 17%, 51%);
 }
+main article .share .show-social {
+  background-color: hsl(217deg, 19%, 35%) !important;
+}
+main article .share .show-social svg {
+  fill: hsl(210deg, 46%, 95%);
+}
 
 /* PORTRAIT TABLET */
 /* LANDSCAPE TABLET */
 /* LAPTOP/DESKTOP */
+@media only screen and (min-width: 992px) {
+  /* MAIN */
+  main {
+    width: 735px;
+    height: 280px;
+    flex-direction: row;
+    /* DRAWERS IMAGE */
+  }
+  main .drawers-image {
+    width: 290px;
+    height: 100%;
+    object-position: left 30%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  main article {
+    /* DETAILS SECTION */
+    /* AVATAR SECTION */
+    /* SOCIAL MEDIA SECTION */
+    /* SHARE */
+  }
+  main article .details-section {
+    padding: 30px 40px 5px;
+  }
+  main article .details-section h1 {
+    margin: 0px;
+    font-family: "Manrope-Medium";
+    font-size: 1.6em;
+    color: hsl(217deg, 19%, 35%);
+    line-height: 30px;
+  }
+  main article .details-section p {
+    margin: 10px 0px;
+    font-family: "Manrope-Medium";
+    font-size: 1em;
+    color: hsl(214deg, 17%, 51%);
+  }
+  main article .avatar-section {
+    position: absolute;
+    z-index: 0;
+    padding: 0px 40px;
+    width: 365px;
+    height: 40px;
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    /* AVATAR IMAGE */
+    /* AVATAR DETAILS */
+  }
+  main article .avatar-section .circle-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+  }
+  main article .avatar-section .circle-image img {
+    width: 100%;
+    border-radius: inherit;
+  }
+  main article .avatar-section .avatar-details {
+    margin-left: 15px;
+  }
+  main article .avatar-section .avatar-details .avatar-name {
+    margin: 4px 0px;
+    font-family: "Manrope-Bold";
+    color: hsl(217deg, 19%, 35%);
+  }
+  main article .avatar-section .avatar-details .avatar-date {
+    margin: 4px 0px;
+    font-family: "Manrope-Medium";
+    color: hsl(212deg, 23%, 69%);
+  }
+  main article .social-media-section {
+    position: absolute;
+    z-index: 1;
+    bottom: 42.5%;
+    right: 21.5%;
+    padding: 18px 38px;
+    width: 175px;
+    height: 24px;
+    background-color: hsl(217deg, 19%, 35%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    /* BOTTOM ARROW */
+  }
+  main article .social-media-section::before {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 60px;
+    left: 115px; /* 1px buffer for zooming problems while rendering*/
+    border-width: 15px;
+    border-color: hsl(217deg, 19%, 35%) transparent transparent transparent;
+    border-style: solid;
+  }
+  main article .social-media-section h1 {
+    margin: 6px 0px;
+    font-family: "Manrope-Medium";
+    font-size: 0.95em;
+    color: hsl(212deg, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  main article .social-media-section .social-media {
+    margin: 2px 4px;
+  }
+  main article .social-media-section .social-media .social-media-icon {
+    margin-left: 12px;
+  }
+  main article .share {
+    position: absolute;
+    z-index: 2;
+    padding: 0px 40px;
+    width: 365px;
+    height: 40px;
+    background-color: transparent;
+  }
+}
 /* LARGE LAPTOP/DESKTOP */
 
 /*# sourceMappingURL=styles.css.map */
