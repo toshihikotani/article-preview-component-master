@@ -114,6 +114,12 @@ main article .social-media-section .social-media {
 main article .social-media-section .social-media .social-media-icon {
   margin-left: 12px;
 }
+main article .social-media-section .social-media .social-media-icon:hover {
+  cursor: pointer;
+}
+main article .show-social-media {
+  display: flex !important;
+}
 main article .share {
   position: absolute;
   z-index: 2;
@@ -131,11 +137,14 @@ main article .share .share-button {
   border: 0px solid;
   border-radius: 50px;
 }
+main article .share .share-button:hover {
+  cursor: pointer;
+}
 main article .share .share-button svg {
   fill: hsl(214deg, 17%, 51%);
 }
 main article .share .show-social {
-  background-color: hsl(217deg, 19%, 35%) !important;
+  background-color: hsl(214deg, 17%, 51%) !important;
 }
 main article .share .show-social svg {
   fill: hsl(210deg, 46%, 95%);
@@ -143,8 +152,7 @@ main article .share .show-social svg {
 
 /* PORTRAIT TABLET */
 /* LANDSCAPE TABLET */
-/* LAPTOP/DESKTOP */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   /* MAIN */
   main {
     width: 735px;
@@ -220,8 +228,8 @@ main article .share .show-social svg {
   main article .social-media-section {
     position: absolute;
     z-index: 1;
-    bottom: 42.5%;
-    right: 21.5%;
+    bottom: 35.5%;
+    right: 1.5%;
     padding: 18px 38px;
     width: 175px;
     height: 24px;
@@ -230,7 +238,7 @@ main article .share .show-social svg {
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    display: flex;
+    display: none;
     /* BOTTOM ARROW */
   }
   main article .social-media-section::before {
@@ -265,6 +273,13 @@ main article .share .show-social svg {
     width: 365px;
     height: 40px;
     background-color: transparent;
+  }
+}
+/* LAPTOP/DESKTOP */
+@media only screen and (min-width: 992px) {
+  main article .social-media-section {
+    bottom: 42.5%;
+    right: 21.5%;
   }
 }
 /* LARGE LAPTOP/DESKTOP */
