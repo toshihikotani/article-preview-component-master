@@ -283,5 +283,11 @@ main article .share .show-social svg {
   }
 }
 /* LARGE LAPTOP/DESKTOP */
+@media only screen and (min-width: 1200px) {
+  main article .social-media-section {
+    bottom: 43.5%;
+    right: 27.25%;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
